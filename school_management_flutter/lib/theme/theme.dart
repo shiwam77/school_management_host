@@ -30,7 +30,6 @@ class AppTheme {
           ? AppColors.scaffoldBackgroundColor
           : AppColors.scaffoldBackgroundColor,
       canvasColor: isDarkTheme ? AppColors.canvasColor : AppColors.canvasColor,
-
       textTheme: Theme.of(context).textTheme.copyWith(
             //Display text is our primary text where color will not change in any mode if we want will use copy constructor & even fpr font family
             displaySmall: GoogleFonts.roboto(
@@ -167,7 +166,8 @@ class AppTheme {
             isDarkTheme ? Colors.orange : Colors.purple),
       ),
       listTileTheme: ListTileThemeData(
-        iconColor: isDarkTheme ? const Color(0xff838383) : const Color(0xff838383),
+        iconColor:
+            isDarkTheme ? const Color(0xff838383) : const Color(0xff838383),
       ),
       appBarTheme: AppBarTheme(
           backgroundColor: isDarkTheme ? Colors.black : Colors.white,

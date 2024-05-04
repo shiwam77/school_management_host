@@ -5,6 +5,7 @@
 list(APPEND FLUTTER_PLUGIN_LIST
   desktop_lifecycle
   desktop_multi_window
+  file_selector_linux
   flutter_acrylic
   screen_retriever
   sentry_flutter

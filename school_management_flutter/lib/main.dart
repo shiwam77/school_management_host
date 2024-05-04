@@ -7,12 +7,10 @@ import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:logger/logger.dart';
-import 'package:school_management_client/school_management_client.dart';
 import 'package:school_management_flutter/router/route_handle_2.0.dart';
 import 'package:school_management_flutter/theme/theme.dart';
 import 'package:school_management_flutter/theme/theme_notifier.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
-import 'package:serverpod_flutter/serverpod_flutter.dart';
 import 'package:system_theme/system_theme.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -23,8 +21,6 @@ var logger = Logger();
 // The client is set up to connect to a Serverpod running on a local server on
 // the default port. You will need to modify this to connect to staging or
 // production servers.
-var client = Client('http://$localhost:8080/')
-  ..connectivityMonitor = FlutterConnectivityMonitor();
 
 const String sentrydsn =
     "https://o4506931461357568.ingest.us.sentry.io/4506931462733824";

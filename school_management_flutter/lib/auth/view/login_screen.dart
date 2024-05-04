@@ -11,6 +11,8 @@ import 'package:school_management_flutter/widget/reactangular_text_feild.dart';
 import 'package:school_management_flutter/widget/widget.dart';
 import 'package:statemanagement_riverpod_mvvm/riverpod_mvvm.dart';
 
+import '../../widget/scroll_column_expandable.dart';
+
 class LoginScreen extends StatelessView<LoginVm> {
   const LoginScreen({super.key});
 
@@ -39,7 +41,7 @@ class LoginForm extends StatelessWidget {
       padding: EdgeInsets.only(left: 70.w, right: 100.w),
       child: Form(
         key: vm.formKey,
-        child: Column(
+        child: ScrollColumnExpandable(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
