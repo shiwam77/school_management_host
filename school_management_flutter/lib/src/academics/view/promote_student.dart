@@ -57,8 +57,9 @@ class PromoteStudentScreen extends StatelessView<PromoteStudentVM> {
                                     fontWeight: FontWeight.w500,
                                     color: AppColors.textColorBlack),
                           ),
-                          VSpace(12),
+                          const VSpace(12),
                           Container(
+                            height: 35,
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                                 borderRadius:
@@ -94,7 +95,7 @@ class PromoteStudentScreen extends StatelessView<PromoteStudentVM> {
                         ],
                       ),
                     ),
-                    HSpace(12),
+                    const HSpace(12),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,6 +110,7 @@ class PromoteStudentScreen extends StatelessView<PromoteStudentVM> {
                           ),
                           VSpace(12),
                           Container(
+                            height: 35,
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                                 borderRadius:
@@ -171,6 +173,7 @@ class PromoteStudentScreen extends StatelessView<PromoteStudentVM> {
                           ),
                           VSpace(12),
                           Container(
+                            height: 35,
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                                 borderRadius:
@@ -222,6 +225,7 @@ class PromoteStudentScreen extends StatelessView<PromoteStudentVM> {
                           ),
                           VSpace(12),
                           Container(
+                            height: 35,
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                                 borderRadius:
@@ -272,6 +276,7 @@ class PromoteStudentScreen extends StatelessView<PromoteStudentVM> {
                           ),
                           VSpace(12),
                           Container(
+                            height: 35,
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                                 borderRadius:

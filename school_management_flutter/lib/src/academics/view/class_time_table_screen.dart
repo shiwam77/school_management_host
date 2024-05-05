@@ -58,6 +58,7 @@ class ClassTimeTableScreen extends StatelessView<ClassTimeTableVM> {
                           ),
                           const VSpace(12),
                           Container(
+                            height: 35,
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                                 borderRadius:
@@ -93,7 +94,7 @@ class ClassTimeTableScreen extends StatelessView<ClassTimeTableVM> {
                         ],
                       ),
                     ),
-                    HSpace(12),
+                    const HSpace(12),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,6 +109,7 @@ class ClassTimeTableScreen extends StatelessView<ClassTimeTableVM> {
                           ),
                           VSpace(12),
                           Container(
+                            height: 35,
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                                 borderRadius:

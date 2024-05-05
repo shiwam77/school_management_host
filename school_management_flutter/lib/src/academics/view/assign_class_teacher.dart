@@ -80,6 +80,7 @@ class AssignTeacherView extends StatelessWidget {
           ),
           const VSpace(20),
           Container(
+            height: 35,
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10.r)),
@@ -110,6 +111,7 @@ class AssignTeacherView extends StatelessWidget {
           ),
           const VSpace(20),
           Container(
+            height: 35,
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10.r)),

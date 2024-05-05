@@ -79,59 +79,63 @@ class CreateSubjectView extends StatelessWidget {
                 color: AppColors.textColorBlack),
           ),
           const VSpace(20),
-          TextField(
-            style: context.theme.textTheme.titleMedium!.copyWith(
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w500,
-                color: AppColors.textColorBlack),
-            decoration: InputDecoration(
-              labelText: 'Subject Group Name',
-              border: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: context.theme.primaryColor,
-                  width: 1.w,
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(10.r)),
-              ),
-              labelStyle: context.theme.textTheme.titleMedium!.copyWith(
+          SizedBox(
+            height: 40,
+            child: TextField(
+              style: context.theme.textTheme.titleMedium!.copyWith(
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w500,
                   color: AppColors.textColorBlack),
-              hintStyle: context.theme.textTheme.titleMedium!.copyWith(
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.w500,
-                  color: AppColors.textColorBlack),
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: context.theme.primaryColor,
-                  width: 1.w,
+              decoration: InputDecoration(
+                labelText: 'Subject Group Name',
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: context.theme.primaryColor,
+                    width: 1.w,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10.r)),
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(10.r)),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.red, width: 1.w),
-                borderRadius: BorderRadius.all(Radius.circular(10.r)),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.red, width: 1.w),
-                borderRadius: BorderRadius.all(Radius.circular(10.r)),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.black.withOpacity(0.23999999463558197),
+                labelStyle: context.theme.textTheme.titleMedium!.copyWith(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.textColorBlack),
+                hintStyle: context.theme.textTheme.titleMedium!.copyWith(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.textColorBlack),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: context.theme.primaryColor,
+                    width: 1.w,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10.r)),
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(10.r)),
-              ),
-              disabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(
-                  color: Colors.transparent,
+                errorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.red, width: 1.w),
+                  borderRadius: BorderRadius.all(Radius.circular(10.r)),
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.red, width: 1.w),
+                  borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black.withOpacity(0.23999999463558197),
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                ),
+                disabledBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: Colors.transparent,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                ),
               ),
             ),
           ),
           const VSpace(20),
           Container(
+            height: 35,
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10.r)),
