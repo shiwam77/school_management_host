@@ -296,7 +296,7 @@ List<AdminMenuItem>? permissions = [
       ),
       AdminMenuItem(
         title: 'Subject Group',
-        route: '/SubjectGroup',
+        route: '/subjectGroup',
       ),
       AdminMenuItem(
         title: 'Promote Student',

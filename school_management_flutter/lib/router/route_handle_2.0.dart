@@ -3,6 +3,11 @@ import 'package:go_router/go_router.dart';
 import 'package:school_management_flutter/auth/view/forget_password_screen.dart';
 import 'package:school_management_flutter/auth/view/otp_screen.dart';
 import 'package:school_management_flutter/auth/view/signup_screen.dart';
+import 'package:school_management_flutter/src/academics/view/assign_class_teacher.dart';
+import 'package:school_management_flutter/src/academics/view/class_time_table_screen.dart';
+import 'package:school_management_flutter/src/academics/view/promote_student.dart';
+import 'package:school_management_flutter/src/academics/view/subject_group.dart';
+import 'package:school_management_flutter/src/academics/view/teacher_time_line_screen.dart';
 import 'package:school_management_flutter/src/dashboard/view/dashboard.dart';
 import 'package:school_management_flutter/src/dashboard/view/home_screen.dart';
 
@@ -34,6 +39,11 @@ class CustomNavigationHelper {
   static String section = '/section';
   static String subject = '/subject';
   static String classScreen = '/class';
+  static String subjectGroupScreen = '/subjectGroup';
+  static String promoteStudentScreen = '/promoteStudent';
+  static String assignTeacher = '/assignClassTeacher';
+  static String teacherTimeTableScreen = '/teacherTimeTable';
+  static String classTimeTableScreen = '/classTimeTable';
   static const String loginPath = '/';
   static const String forgotPassword = '/forgotpassword';
   static const String otpscreen = '/otpscreen';
@@ -73,6 +83,36 @@ class CustomNavigationHelper {
             path: classScreen,
             pageBuilder: (context, GoRouterState state) {
               return const NoTransitionPage(child: ClassScreen());
+            },
+          ),
+          GoRoute(
+            path: subjectGroupScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: SubjectGroupScreen());
+            },
+          ),
+          GoRoute(
+            path: promoteStudentScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: PromoteStudentScreen());
+            },
+          ),
+          GoRoute(
+            path: assignTeacher,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: AssignTeacher());
+            },
+          ),
+          GoRoute(
+            path: teacherTimeTableScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: TeacherTimeTableScreen());
+            },
+          ),
+          GoRoute(
+            path: classTimeTableScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: ClassTimeTableScreen());
             },
           ),
         ],

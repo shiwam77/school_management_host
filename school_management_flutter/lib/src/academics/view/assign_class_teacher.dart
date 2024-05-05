@@ -4,18 +4,18 @@ import 'package:school_management_flutter/_internal/components/spacing.dart';
 import 'package:school_management_flutter/const/app_colors.dart';
 import 'package:school_management_flutter/extension/theme_extension.dart';
 import 'package:school_management_flutter/src/academics/view/section_screen.dart';
-import 'package:school_management_flutter/src/academics/vm/class.vm.dart';
+import 'package:school_management_flutter/src/academics/vm/assign_teacher.vm.dart';
 import 'package:school_management_flutter/styles.dart';
 import 'package:statemanagement_riverpod_mvvm/riverpod_mvvm.dart';
 
-class ClassScreen extends StatelessView<ClassVM> {
-  const ClassScreen({super.key});
+class AssignTeacher extends StatelessView<AssignTeacherVM> {
+  const AssignTeacher({super.key});
 
   @override
-  ViewModelProvider<ClassVM> get vm => classVmProvider;
+  ViewModelProvider<AssignTeacherVM> get vm => assignTeacherVmProvider;
 
   @override
-  Widget render(BuildContext context, ClassVM vm, ref) {
+  Widget render(BuildContext context, AssignTeacherVM vm, ref) {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
@@ -31,7 +31,7 @@ class ClassScreen extends StatelessView<ClassVM> {
                 ),
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                  child: CreateClassView(
+                  child: AssignTeacherView(
                     vm: vm,
                   ),
                 ),
@@ -47,7 +47,7 @@ class ClassScreen extends StatelessView<ClassVM> {
                 ),
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                  child: ClassListView(
+                  child: ClassTeacherList(
                     vm: vm,
                   ),
                 ),
@@ -60,162 +60,177 @@ class ClassScreen extends StatelessView<ClassVM> {
   }
 }
 
-class CreateClassView extends StatelessWidget {
-  final ClassVM vm;
-  const CreateClassView({super.key, required this.vm});
+class AssignTeacherView extends StatelessWidget {
+  final AssignTeacherVM vm;
+  const AssignTeacherView({super.key, required this.vm});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          'Add Class',
-          style: context.theme.textTheme.titleMedium!.copyWith(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w500,
-              color: AppColors.textColorBlack),
-        ),
-        const VSpace(20),
-        TextField(
-          style: context.theme.textTheme.titleMedium!.copyWith(
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w500,
-              color: AppColors.textColorBlack),
-          decoration: InputDecoration(
-            labelText: 'Class',
-            border: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: context.theme.primaryColor,
-                width: 1.w,
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(10.r)),
-            ),
-            labelStyle: context.theme.textTheme.titleMedium!.copyWith(
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w500,
-                color: AppColors.textColorBlack),
-            hintStyle: context.theme.textTheme.titleMedium!.copyWith(
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w500,
-                color: AppColors.textColorBlack),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: context.theme.primaryColor,
-                width: 1.w,
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(10.r)),
-            ),
-            errorBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.red, width: 1.w),
-              borderRadius: BorderRadius.all(Radius.circular(10.r)),
-            ),
-            focusedErrorBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.red, width: 1.w),
-              borderRadius: BorderRadius.all(Radius.circular(10.r)),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.black.withOpacity(0.23999999463558197),
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(10.r)),
-            ),
-            disabledBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: Colors.transparent,
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(10.r)),
-            ),
-          ),
-        ),
-        const VSpace(20),
-        RichText(
-          text: TextSpan(
-            text: 'Sections ',
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            'Assign Class Teacher',
             style: context.theme.textTheme.titleMedium!.copyWith(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w500,
                 color: AppColors.textColorBlack),
-            children: const [
-              TextSpan(
-                text: '*',
-                style: TextStyle(color: Colors.red),
+          ),
+          const VSpace(20),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                border: Border.all(
+                    color: Colors.black.withOpacity(0.23999999463558197))),
+            child: DropdownButton<String>(
+              isExpanded: true,
+              underline: const SizedBox.shrink(),
+              value: vm.selectedClass,
+              onChanged: (String? newValue) {
+                // Update the selected class
+                vm.selectedClass = newValue!;
+                vm.setState(() {});
+              },
+              items: vm.classes.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: context.theme.textTheme.titleMedium!.copyWith(
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.textColorBlack),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+          const VSpace(20),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                border: Border.all(
+                    color: Colors.black.withOpacity(0.23999999463558197))),
+            child: DropdownButton<String>(
+              isExpanded: true,
+              underline: const SizedBox.shrink(),
+              value: vm.selectedSection,
+              onChanged: (String? newValue) {
+                // Update the selected class
+                vm.selectedSection = newValue!;
+                vm.setState(() {});
+              },
+              items:
+                  vm.sectionNames.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: context.theme.textTheme.titleMedium!.copyWith(
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.textColorBlack),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+          const VSpace(20),
+          RichText(
+            text: TextSpan(
+              text: 'Class Teacher ',
+              style: context.theme.textTheme.titleMedium!.copyWith(
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.textColorBlack),
+              children: [
+                TextSpan(
+                  text: '*',
+                  style: context.theme.textTheme.titleMedium!.copyWith(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.red),
+                ),
+              ],
+            ),
+          ),
+          const VSpace(20),
+          ListView.builder(
+            shrinkWrap: true,
+            itemCount: vm.teacher.length,
+            itemBuilder: (context, index) {
+              final sectionName = vm.teacher[index];
+              return CheckboxListTile(
+                title: Text(
+                  sectionName,
+                  style: context.theme.textTheme.titleMedium!.copyWith(
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.textColorBlack),
+                ),
+                activeColor: Colors.white, // Set to white
+                checkColor: Colors.white, // Set to white
+                fillColor: MaterialStateProperty.resolveWith<Color>(
+                  (Set<MaterialState> states) {
+                    if (states.contains(MaterialState.selected)) {
+                      // If the checkbox is checked, return white
+                      return AppColors.btnColor;
+                    }
+                    // Otherwise, return null (default fill color)
+                    return Colors.white;
+                  },
+                ),
+                value: vm.selectedTeacher
+                    .contains(sectionName), // Set the initial value as needed
+                onChanged: (bool? value) {
+                  if (value != null) {
+                    if (value) {
+                      // Checkbox is checked, add the section to the selectedSections list
+                      vm.selectedTeacher.add(sectionName);
+                    } else {
+                      // Checkbox is unchecked, remove the section from the selectedSections list
+                      vm.selectedTeacher.remove(sectionName);
+                    }
+                    vm.setState(() {});
+                  }
+                },
+              );
+            },
+          ),
+          const VSpace(20),
+          const VSpace(20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Spacer(),
+              ElevatedButton(
+                onPressed: () {
+                  // Handle save button tap
+                },
+                child: Text(
+                  'Save',
+                  style: context.theme.textTheme.titleMedium!.copyWith(
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.textColorBlack),
+                ),
               ),
             ],
           ),
-        ),
-        const VSpace(20),
-        ListView.builder(
-          shrinkWrap: true,
-          itemCount: vm.sectionNames.length,
-          itemBuilder: (context, index) {
-            final sectionName = vm.sectionNames[index];
-            return CheckboxListTile(
-              title: Text(
-                sectionName,
-                style: context.theme.textTheme.titleMedium!.copyWith(
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.textColorBlack),
-              ),
-              activeColor: Colors.white, // Set to white
-              checkColor: Colors.white, // Set to white
-              fillColor: MaterialStateProperty.resolveWith<Color>(
-                (Set<MaterialState> states) {
-                  if (states.contains(MaterialState.selected)) {
-                    // If the checkbox is checked, return white
-                    return AppColors.btnColor;
-                  }
-                  // Otherwise, return null (default fill color)
-                  return Colors.white;
-                },
-              ),
-              value: vm.selectedSections
-                  .contains(sectionName), // Set the initial value as needed
-              onChanged: (bool? value) {
-                if (value != null) {
-                  if (value) {
-                    // Checkbox is checked, add the section to the selectedSections list
-                    vm.selectedSections.add(sectionName);
-                  } else {
-                    // Checkbox is unchecked, remove the section from the selectedSections list
-                    vm.selectedSections.remove(sectionName);
-                  }
-                  vm.setState(() {});
-                }
-              },
-            );
-          },
-        ),
-        const VSpace(20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const Spacer(),
-            ElevatedButton(
-              onPressed: () {
-                // Handle save button tap
-              },
-              child: Text(
-                'Save',
-                style: context.theme.textTheme.titleMedium!.copyWith(
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.textColorBlack),
-              ),
-            ),
-          ],
-        ),
-        const VSpace(20),
-      ],
+          const VSpace(20),
+        ],
+      ),
     );
   }
 }
 
-class ClassListView extends StatelessWidget {
-  final ClassVM vm;
-  const ClassListView({super.key, required this.vm});
+class ClassTeacherList extends StatelessWidget {
+  final AssignTeacherVM vm;
+  const ClassTeacherList({super.key, required this.vm});
 
   @override
   Widget build(BuildContext context) {
@@ -235,7 +250,7 @@ class ClassListView extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'Class List',
+            'Class Teacher List',
             style: context.theme.textTheme.titleMedium!.copyWith(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w500,
@@ -251,7 +266,7 @@ class ClassListView extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                   color: AppColors.textColorBlack),
               decoration: InputDecoration(
-                prefixIcon: const Icon(Icons.search),
+                prefixIcon: Icon(Icons.search),
                 hintText: 'Search...',
                 contentPadding: const EdgeInsets.symmetric(
                     vertical: 10), // Adjust vertical padding
@@ -302,7 +317,7 @@ class ClassListView extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: DataTable(
-              columnSpacing: 180.w,
+              columnSpacing: 90.w,
               dataRowMaxHeight: 100,
               columns: [
                 DataColumn(
@@ -312,7 +327,12 @@ class ClassListView extends StatelessWidget {
                 )),
                 DataColumn(
                     label: Text(
-                  'Sections',
+                  'Section',
+                  style: headerStyle,
+                )),
+                DataColumn(
+                    label: Text(
+                  'Class Teacher',
                   style: headerStyle,
                 )),
                 DataColumn(
@@ -323,22 +343,26 @@ class ClassListView extends StatelessWidget {
               ],
               rows: [
                 ...List.generate(
-                    2,
+                    5,
                     (index) => DataRow(cells: [
                           DataCell(Text(
-                            'Math',
+                            'Class $index',
+                            style: rowStyle,
+                          )),
+                          DataCell(Text(
+                            'A',
                             style: rowStyle,
                           )),
                           DataCell(SizedBox(
                             width: 100,
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 5),
+                              padding: const EdgeInsets.symmetric(vertical: 8),
                               child: ListView.builder(
                                   itemCount: 10,
                                   shrinkWrap: true,
                                   itemBuilder: (context, index) {
                                     return Text(
-                                      'A',
+                                      'Shiwam Karn',
                                       textAlign: TextAlign.center,
                                       style: rowStyle,
                                     );
