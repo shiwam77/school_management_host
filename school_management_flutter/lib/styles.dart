@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Durations {
+class DurationsClass {
   static const Duration fastest = Duration(milliseconds: 150);
 
   static const Duration fast = Duration(milliseconds: 250);

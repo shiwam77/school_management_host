@@ -17,7 +17,9 @@ class AppTheme {
       primaryColor: AppColors.primary,
       fontFamily: 'SF Pro Display',
       focusColor: AppColors.primary,
-
+      buttonTheme: const ButtonThemeData(
+        buttonColor: Colors.green, // Change this color to your desired color
+      ),
       extensions: const <ThemeExtension<AppColorExtension>>[
         // AppColorExtension(
         //   color1: isDarkTheme ? AppColors.light : AppColors.dark,

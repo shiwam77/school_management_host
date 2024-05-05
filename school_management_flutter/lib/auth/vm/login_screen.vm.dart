@@ -10,11 +10,27 @@ class LoginVm extends ViewModel {
   final formKey = GlobalKey<FormState>();
   bool isPasswordError = false;
   bool isUserNameError = false;
-  bool isLoading = false;
   bool fullScreen = false;
   bool isPasswordVisible = false;
   bool isChecked = false;
   late bool isTrue;
+
+  // late GoogleRestService googleRest;
+  // GoogleAuthEndpointInfo? authInfo;
+  String authUrl = "https://google.com";
+  String authCode = "10001";
+  bool httpError = false;
+  bool authCodeError = false;
+  int pageIndex = 0;
+
+  bool get isLoading => _isLoading;
+  bool _isLoading = false;
+
+  set isLoading(bool value) => setState(() => _isLoading = value);
+
+  Size prevSize = Size.zero;
+  bool showContent = false;
+  bool twoColumnMode = true;
 
   @override
   void initState() {
@@ -43,6 +59,7 @@ class LoginVm extends ViewModel {
           "password": passwordController.text.trim()
         };
         await Future.delayed(Duration(seconds: 1));
+        navigateToDashboard();
       } catch (e, stackTrace) {
       } finally {
         isLoading = false;
@@ -57,6 +74,10 @@ class LoginVm extends ViewModel {
 
   navigateToSignupScreen() {
     context.push(CustomNavigationHelper.signupScreen);
+  }
+
+  navigateToDashboard() {
+    context.go(CustomNavigationHelper.homePath);
   }
 
   String? passwordValidator() {
@@ -81,6 +102,12 @@ class LoginVm extends ViewModel {
       }
       setState(() {});
     });
+  }
+
+  void showPanel(value) => setState(() => showContent = value);
+
+  void handleRefreshPressed() {
+    setState(() => _isLoading = true);
   }
 }
 

@@ -7,6 +7,7 @@ import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:logger/logger.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'package:school_management_flutter/router/route_handle_2.0.dart';
 import 'package:school_management_flutter/theme/theme.dart';
 import 'package:school_management_flutter/theme/theme_notifier.dart';
@@ -208,6 +209,35 @@ class _MyAppState extends State<MyApp> with WindowListener {
                   routerConfig: CustomNavigationHelper.router,
                   title: 'School Management',
                   themeMode: ThemeMode.dark,
+                  builder: (context, widget) => ResponsiveBreakpoints.builder(
+                    breakpoints: [
+                      const Breakpoint(
+                          start: 0, end: 480, name: 'MOBILE_SMALL'),
+                      const Breakpoint(start: 481, end: 850, name: MOBILE),
+                      const Breakpoint(start: 851, end: 1080, name: TABLET),
+                      const Breakpoint(
+                          start: 1081, end: double.infinity, name: DESKTOP),
+                    ],
+                    child: Builder(builder: (context) {
+                      return ResponsiveScaledBox(
+                          width: ResponsiveValue<double?>(context,
+                              defaultValue: null,
+                              conditionalValues: [
+                                // const Condition.equals(
+                                //     name: 'MOBILE_SMALL', value: 900),
+                                // const Condition.between(
+                                //     start: 800, end: 870, value: 900),
+                                // const Condition.between(
+                                //     start: 870, end: 900, value: 1100),
+                                // const Condition.between(
+                                //     start: 900, end: 1000, value: 850),
+                                // const Condition.between(
+                                //     start: 1100, end: 1200, value: 1200),
+                              ]).value,
+                          child:
+                              ClampingScrollWrapper.builder(context, widget!));
+                    }),
+                  ),
                   // themeMode: themeNotifier.value == ThemeModeOption.system
                   //     ? MediaQuery.of(context).platformBrightness ==
                   //             Brightness.dark

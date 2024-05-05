@@ -3,8 +3,13 @@ import 'package:go_router/go_router.dart';
 import 'package:school_management_flutter/auth/view/forget_password_screen.dart';
 import 'package:school_management_flutter/auth/view/otp_screen.dart';
 import 'package:school_management_flutter/auth/view/signup_screen.dart';
+import 'package:school_management_flutter/src/dashboard/view/dashboard.dart';
+import 'package:school_management_flutter/src/dashboard/view/home_screen.dart';
 
 import '../auth/view/login_screen.dart';
+import '../src/academics/view/class_screen.dart';
+import '../src/academics/view/section_screen.dart';
+import '../src/academics/view/subject_screen.dart';
 
 class CustomNavigationHelper {
   static final CustomNavigationHelper _instance =
@@ -26,6 +31,9 @@ class CustomNavigationHelper {
       GlobalKey<NavigatorState>();
 
   static String homePath = '/Dashboard';
+  static String section = '/section';
+  static String subject = '/subject';
+  static String classScreen = '/class';
   static const String loginPath = '/';
   static const String forgotPassword = '/forgotpassword';
   static const String otpscreen = '/otpscreen';
@@ -37,6 +45,45 @@ class CustomNavigationHelper {
 
   CustomNavigationHelper._internal() {
     List<RouteBase> routes = [
+      ShellRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        routes: [
+          //index:0
+
+          GoRoute(
+            path: '/Dashboard',
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: HomeScreen());
+            },
+          ),
+          GoRoute(
+            path: section,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: SectionScreen());
+            },
+          ),
+
+          GoRoute(
+            path: subject,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: SubjectScreen());
+            },
+          ),
+          GoRoute(
+            path: classScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: ClassScreen());
+            },
+          ),
+        ],
+        pageBuilder: (context, state, child) {
+          return NoTransitionPage(
+              child: DashBoard(
+            child: child,
+          ));
+        },
+      ),
+
       GoRoute(
         path: loginPath,
         builder: (context, state) => const LoginScreen(),
@@ -60,7 +107,7 @@ class CustomNavigationHelper {
 
     router = GoRouter(
       navigatorKey: rootNavigatorKey,
-      initialLocation: loginPath,
+      initialLocation: homePath,
       routes: routes,
       redirect: (BuildContext context, GoRouterState state) async {
         return null;
