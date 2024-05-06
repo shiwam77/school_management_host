@@ -10,6 +10,8 @@ import 'package:school_management_flutter/src/academics/view/subject_group.dart'
 import 'package:school_management_flutter/src/academics/view/teacher_time_line_screen.dart';
 import 'package:school_management_flutter/src/dashboard/view/dashboard.dart';
 import 'package:school_management_flutter/src/dashboard/view/home_screen.dart';
+import 'package:school_management_flutter/src/human_resource/view/pay_roll_screen.dart';
+import 'package:school_management_flutter/src/human_resource/view/staff_crud.dart';
 
 import '../auth/view/login_screen.dart';
 import '../src/academics/view/class_screen.dart';
@@ -20,6 +22,7 @@ import '../src/human_resource/view/approve_leave_request.dart';
 import '../src/human_resource/view/department_screen.dart';
 import '../src/human_resource/view/designation_screen.dart';
 import '../src/human_resource/view/leave_type_screen.dart';
+import '../src/human_resource/view/staff_attendance_screen.dart';
 
 class CustomNavigationHelper {
   static final CustomNavigationHelper _instance =
@@ -54,10 +57,13 @@ class CustomNavigationHelper {
   static String leaveTypeScreen = '/leaveType';
   static String applyLeaveScreen = '/applyLeave';
   static String approveLeaveRequestScreen = '/approveLeaveRequest';
+  static String payRoll = '/PayRoll';
+  static String staffAttendanceScreen = '/staffAttendance';
   static const String loginPath = '/';
   static const String forgotPassword = '/forgotpassword';
   static const String otpscreen = '/otpscreen';
   static const String signupScreen = '/SignupScreen';
+  static const String staffCRUDScreen = '/staff';
 
   factory CustomNavigationHelper() {
     return _instance;
@@ -154,6 +160,24 @@ class CustomNavigationHelper {
             path: approveLeaveRequestScreen,
             pageBuilder: (context, GoRouterState state) {
               return const NoTransitionPage(child: ApproveLeaveRequestScreen());
+            },
+          ),
+          GoRoute(
+            path: payRoll,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: PayRollScreen());
+            },
+          ),
+          GoRoute(
+            path: staffAttendanceScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: StaffAttendanceScreen());
+            },
+          ),
+          GoRoute(
+            path: staffCRUDScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: StaffCRUDScreen());
             },
           ),
         ],
