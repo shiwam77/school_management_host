@@ -315,5 +315,43 @@ List<AdminMenuItem>? permissions = [
         route: '/classTimeTable',
       ),
     ],
-  )
+  ),
+  AdminMenuItem(
+    title: 'Human Resource',
+    icon: 'assets/multidoor.svg',
+    children: [
+      AdminMenuItem(
+        title: 'Staff',
+        route: '/staff',
+      ),
+      AdminMenuItem(
+        title: 'Staff Attendance',
+        route: '/staffAttendance',
+      ),
+      AdminMenuItem(
+        title: 'Payroll',
+        route: '/payroll',
+      ),
+      AdminMenuItem(
+        title: 'Approve Leave Request',
+        route: '/approveLeaveRequest',
+      ),
+      AdminMenuItem(
+        title: 'Apply leave',
+        route: '/applyleave',
+      ),
+      AdminMenuItem(
+        title: 'Leave Type',
+        route: '/leaveType',
+      ),
+      AdminMenuItem(
+        title: 'Department',
+        route: '/department',
+      ),
+      AdminMenuItem(
+        title: 'Designation',
+        route: '/designation',
+      ),
+    ],
+  ),
 ];

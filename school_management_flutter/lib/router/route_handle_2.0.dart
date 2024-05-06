@@ -15,6 +15,11 @@ import '../auth/view/login_screen.dart';
 import '../src/academics/view/class_screen.dart';
 import '../src/academics/view/section_screen.dart';
 import '../src/academics/view/subject_screen.dart';
+import '../src/human_resource/view/apply_leave_screen.dart';
+import '../src/human_resource/view/approve_leave_request.dart';
+import '../src/human_resource/view/department_screen.dart';
+import '../src/human_resource/view/designation_screen.dart';
+import '../src/human_resource/view/leave_type_screen.dart';
 
 class CustomNavigationHelper {
   static final CustomNavigationHelper _instance =
@@ -44,6 +49,11 @@ class CustomNavigationHelper {
   static String assignTeacher = '/assignClassTeacher';
   static String teacherTimeTableScreen = '/teacherTimeTable';
   static String classTimeTableScreen = '/classTimeTable';
+  static String designationScreen = '/designation';
+  static String departmentScreen = '/department';
+  static String leaveTypeScreen = '/leaveType';
+  static String applyLeaveScreen = '/applyLeave';
+  static String approveLeaveRequestScreen = '/approveLeaveRequest';
   static const String loginPath = '/';
   static const String forgotPassword = '/forgotpassword';
   static const String otpscreen = '/otpscreen';
@@ -113,6 +123,37 @@ class CustomNavigationHelper {
             path: classTimeTableScreen,
             pageBuilder: (context, GoRouterState state) {
               return const NoTransitionPage(child: ClassTimeTableScreen());
+            },
+          ),
+          GoRoute(
+            path: designationScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: DesignationScreen());
+            },
+          ),
+          GoRoute(
+            path: departmentScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: DepartmentScreen());
+            },
+          ),
+          GoRoute(
+            path: leaveTypeScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: LeaveTypeScreen());
+            },
+          ),
+
+          GoRoute(
+            path: applyLeaveScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: ApplyLeaveScreen());
+            },
+          ),
+          GoRoute(
+            path: approveLeaveRequestScreen,
+            pageBuilder: (context, GoRouterState state) {
+              return const NoTransitionPage(child: ApproveLeaveRequestScreen());
             },
           ),
         ],
