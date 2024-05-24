@@ -26,7 +26,6 @@ class ForgetPasswordVm extends ViewModel {
         };
         await Future.delayed(const Duration(seconds: 1));
         navigateToOtpScreen();
-      } catch (e, stackTrace) {
       } finally {
         isLoading = false;
         setState(() {});

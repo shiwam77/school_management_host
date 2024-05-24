@@ -206,7 +206,7 @@ class CustomExpansionTile extends StatefulWidget {
   final int index;
 
   const CustomExpansionTile(
-      {Key? key,
+      {super.key,
       required this.index,
       this.leading,
       required this.title,
@@ -228,8 +228,7 @@ class CustomExpansionTile extends StatefulWidget {
       this.shape,
       this.collapsedShape,
       this.clipBehavior,
-      this.controller})
-      : super(key: key);
+      this.controller});
 
   final Widget? leading;
 

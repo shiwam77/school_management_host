@@ -73,7 +73,7 @@ class SignupForm extends StatelessWidget {
             Text(
               'Enter your email and password to start using the application',
               style: context.theme.textTheme.titleMedium!.copyWith(
-                color: Color(0xFF929292),
+                color: const Color(0xFF929292),
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w600,
               ),
@@ -150,9 +150,9 @@ class SignupForm extends StatelessWidget {
                   value: vm.isChecked,
                   activeColor: Colors.white, // Set to white
                   checkColor: Colors.white, // Set to white
-                  fillColor: MaterialStateProperty.resolveWith<Color>(
-                    (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.selected)) {
+                  fillColor: WidgetStateProperty.resolveWith<Color>(
+                    (Set<WidgetState> states) {
+                      if (states.contains(WidgetState.selected)) {
                         // If the checkbox is checked, return white
                         return AppColors.btnColor;
                       }
@@ -232,7 +232,7 @@ class SignupForm extends StatelessWidget {
                 Text(
                   'OR',
                   style: TextStyle(
-                    color: Color(0xFF838383),
+                    color: const Color(0xFF838383),
                     fontSize: 15.sp,
                     fontWeight: FontWeight.w500,
                   ),

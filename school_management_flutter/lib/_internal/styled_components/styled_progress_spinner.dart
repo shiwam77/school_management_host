@@ -4,8 +4,7 @@ import 'package:school_management_flutter/extension/theme_extension.dart';
 class StyledProgressSpinner extends StatelessWidget {
   final Color color;
 
-  const StyledProgressSpinner({Key? key, this.color = Colors.white})
-      : super(key: key);
+  const StyledProgressSpinner({super.key, this.color = Colors.white});
 
   @override
   Widget build(BuildContext context) {

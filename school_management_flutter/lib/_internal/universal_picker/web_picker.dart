@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:html';
-import 'dart:typed_data';
 
 import 'package:flutter/foundation.dart';
 
@@ -47,8 +46,9 @@ class WebPicker implements UniversalPicker {
 
   void handleFileLoad(ProgressEvent e) {
     base64Data = reader.result.toString().split(",").last;
-    if (base64Data != null)
-      byteData = Base64Decoder().convert(base64Data!);
+    if (base64Data != null) {
+      byteData = const Base64Decoder().convert(base64Data!);
+    }
     onChange?.call(base64Data ?? "");
   }
 }

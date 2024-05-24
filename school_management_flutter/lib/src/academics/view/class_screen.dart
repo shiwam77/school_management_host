@@ -30,7 +30,7 @@ class ClassScreen extends StatelessView<ClassVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: CreateClassView(
                     vm: vm,
                   ),
@@ -46,7 +46,7 @@ class ClassScreen extends StatelessView<ClassVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: ClassListView(
                     vm: vm,
                   ),
@@ -164,9 +164,9 @@ class CreateClassView extends StatelessWidget {
               ),
               activeColor: Colors.white, // Set to white
               checkColor: Colors.white, // Set to white
-              fillColor: MaterialStateProperty.resolveWith<Color>(
-                (Set<MaterialState> states) {
-                  if (states.contains(MaterialState.selected)) {
+              fillColor: WidgetStateProperty.resolveWith<Color>(
+                (Set<WidgetState> states) {
+                  if (states.contains(WidgetState.selected)) {
                     // If the checkbox is checked, return white
                     return AppColors.btnColor;
                   }

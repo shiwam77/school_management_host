@@ -30,7 +30,7 @@ class SubjectScreen extends StatelessView<SubjectVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: CreateSubjectView(
                     vm: vm,
                   ),
@@ -46,7 +46,7 @@ class SubjectScreen extends StatelessView<SubjectVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: SubjectListView(
                     vm: vm,
                   ),
@@ -284,7 +284,7 @@ class SubjectListView extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 color: AppColors.textColorBlack),
             decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search),
+              prefixIcon: const Icon(Icons.search),
               hintText: 'Search...',
               contentPadding: const EdgeInsets.symmetric(
                   vertical: 10), // Adjust vertical padding
@@ -411,7 +411,7 @@ class SubjectListView extends StatelessWidget {
             Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_left),
+                  icon: const Icon(Icons.keyboard_arrow_left),
                   onPressed: () {
                     // Handle previous page
                   },
@@ -434,7 +434,7 @@ class SubjectListView extends StatelessWidget {
                 ),
                 const HSpace(6),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   onPressed: () {
                     // Handle next page
                   },

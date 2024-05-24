@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="98d76f57-688f-43d4-b7e3-0f4b457b1756" name="Changes" comment="UI: Ui up to approve_leave_request screen">
+      <change afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/student_information/view/bulk_delete_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/student_information/view/student_category.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/student_information/vm/bulk_delete.vm.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/student_information/vm/student_category.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/.metadata" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/.metadata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/animated_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/animated_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/multi_value_listenable.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/multi_value_listenable.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/no_glow_scroll_behavior.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/pinned.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/pinned.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/pinned_stack.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/pinned_stack.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/seperated_flexibles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/seperated_flexibles.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/spacers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/spacers.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/spacing.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/spacing.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/translate_and_align.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/components/translate_and_align.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/buttons/colored_icon_btn.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/buttons/colored_icon_btn.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/buttons/primary_btn.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/buttons/primary_btn.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/buttons/secondary_btn.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/buttons/secondary_btn.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/buttons/transparent_btn.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/buttons/transparent_btn.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/styled_icons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/styled_icons.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/styled_image_icon.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/styled_image_icon.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/styled_progress_spinner.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/styled_components/styled_progress_spinner.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/universal_file/io_file.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/universal_file/io_file.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/universal_file/web_file.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/universal_file/web_file.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/universal_picker/desktop_picker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/universal_picker/desktop_picker.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/universal_picker/web_picker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/universal_picker/web_picker.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/utils/build_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/utils/build_utils.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/utils/picker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/utils/picker.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/_internal/utils/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/_internal/utils/utils.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/auth/view/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/auth/view/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/auth/view/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/auth/view/signup_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/auth/vm/forget_password_screen.vm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/auth/vm/forget_password_screen.vm.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/auth/vm/login_screen.vm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/auth/vm/login_screen.vm.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/auth/vm/otp_screen.vm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/auth/vm/otp_screen.vm.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/auth/vm/signup_screen.vm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/auth/vm/signup_screen.vm.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/mixin/validator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/mixin/validator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/assign_class_teacher.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/assign_class_teacher.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/class_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/class_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/class_time_table_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/class_time_table_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/promote_student.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/promote_student.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/section_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/section_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/subject_group.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/subject_group.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/subject_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/subject_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/vm/section.vm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/vm/section.vm.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/academics/widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/dashboard/widget/dashboard_body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/dashboard/widget/dashboard_body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/dashboard/widget/full_side_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/dashboard/widget/full_side_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/dashboard/widget/side_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/dashboard/widget/side_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/dashboard/widget/side_bar_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/dashboard/widget/side_bar_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/apply_leave_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/apply_leave_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/approve_leave_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/approve_leave_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/department_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/department_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/designation_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/designation_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/leave_type_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/leave_type_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/pay_roll_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/pay_roll_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/staff_attendance_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/staff_attendance_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/staff_crud.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/view/staff_crud.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/vm/desgination.vm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/src/human_resource/vm/desgination.vm.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/styles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/styles.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/theme/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/theme/theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/widget/dot_animation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/widget/dot_animation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/widget/reactangular_text_feild.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/widget/reactangular_text_feild.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/lib/widget/scroll_column_expandable.dart" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/lib/widget/scroll_column_expandable.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/school_management_flutter/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/web/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/web/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/web/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/web/icons/Icon-maskable-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/web/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_management_flutter/web/manifest.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="stview" />
+        <option value="riverpod_vm" />
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
+  </component>
+  <component name="ProjectId" id="2fwn66pdCrvnrmkPpitxHIwW4yd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "C:/Users/ayusha/school_management/school_management_flutter/lib/src/dashboard/widget",
+    "settings.editor.selected.configurable": "dart.settings",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ayusha\school_management\school_management_flutter\lib\src\dashboard\widget" />
+      <recent name="C:\Users\ayusha\school_management\school_management_flutter\assets" />
+      <recent name="C:\Users\ayusha\school_management\school_management_flutter\lib\extension" />
+      <recent name="C:\Users\ayusha\school_management\school_management_flutter\lib\auth" />
+      <recent name="C:\Users\ayusha\school_management\school_management_flutter\lib\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ayusha\school_management\school_management_flutter\lib\module" />
+      <recent name="C:\Users\ayusha\school_management\school_management_flutter\lib\src\dashboard\vm" />
+      <recent name="C:\Users\ayusha\school_management\school_management_flutter\lib\src\academic_year\view" />
+      <recent name="C:\Users\ayusha\school_management\school_management_flutter\assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/school_management_flutter/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98d76f57-688f-43d4-b7e3-0f4b457b1756" name="Changes" comment="" />
+      <created>1714720831656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714720831656</updated>
+    </task>
+    <task id="LOCAL-00001" summary="chore : UI component for basic layout">
+      <created>1714819591898</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714819591898</updated>
+    </task>
+    <task id="LOCAL-00002" summary="UI : UI for Class,Section,Subject">
+      <created>1714910646375</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714910646375</updated>
+    </task>
+    <task id="LOCAL-00003" summary="UI : academic module completed">
+      <created>1714926641659</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714926641659</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Tweak : Ui tweaks">
+      <created>1714927261444</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714927261444</updated>
+    </task>
+    <task id="LOCAL-00005" summary="UI: Ui up to approve_leave_request screen">
+      <created>1714981518969</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714981518969</updated>
+    </task>
+    <task id="LOCAL-00006" summary="UI: Ui up to approve_leave_request screen">
+      <created>1714998177885</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714998177885</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore : UI component for basic layout" />
+    <MESSAGE value="UI : UI for Class,Section,Subject" />
+    <MESSAGE value="UI : academic module completed" />
+    <MESSAGE value="Tweak : Ui tweaks" />
+    <MESSAGE value="UI: Ui up to approve_leave_request screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI: Ui up to approve_leave_request screen" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/class_screen.dart</url>
+          <line>304</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/promote_student.dart</url>
+          <line>358</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/school_management_flutter/lib/src/academics/view/promote_student.dart</url>
+          <line>360</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

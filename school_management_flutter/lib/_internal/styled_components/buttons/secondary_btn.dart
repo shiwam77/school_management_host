@@ -25,8 +25,7 @@ class SecondaryIconBtn extends StatelessWidget {
   final Color color;
 
   const SecondaryIconBtn(this.icon,
-      {Key? key, this.onPressed, required this.color})
-      : super(key: key);
+      {super.key, this.onPressed, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -49,14 +48,13 @@ class SecondaryBtn extends StatefulWidget {
   final void Function(bool)? onFocusChanged;
 
   const SecondaryBtn(
-      {Key? key,
+      {super.key,
       this.child,
       this.onPressed,
       this.minWidth = 78,
       this.minHeight = 42,
       this.contentPadding = Insets.m,
-      this.onFocusChanged})
-      : super(key: key);
+      this.onFocusChanged});
 
   @override
   SecondaryBtnState createState() => SecondaryBtnState();
@@ -82,8 +80,8 @@ class SecondaryBtnState extends State<SecondaryBtn> {
         onFocusChanged: widget.onFocusChanged,
         downColor: context.appColors.color1!.withOpacity(.35),
         borderRadius: Corners.s5,
-        child: IgnorePointer(child: widget.child),
         onPressed: widget.onPressed,
+        child: IgnorePointer(child: widget.child),
       ),
     );
   }

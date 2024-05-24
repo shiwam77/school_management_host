@@ -17,7 +17,7 @@ class AnimatedTextSpikeState extends AnimatedState<AnimatedTextSpike> {
       opacity: animation.value,
       child: GestureDetector(
         onTap: () => animation.forward(from: 0),
-        child: Text("Hello Fade:"),
+        child: const Text("Hello Fade:"),
       ),
     );
   }

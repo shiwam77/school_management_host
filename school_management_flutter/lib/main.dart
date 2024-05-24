@@ -133,7 +133,7 @@ void mainDelegate() async {
         error,
         stackTrace: stackTrace,
       );
-    } catch (e, stacktrace) {
+    } catch (e) {
       logger.e(e);
     }
   });

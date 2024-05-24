@@ -13,8 +13,7 @@ class StyledImageIcon extends StatelessWidget {
   final double size;
 
   const StyledImageIcon(this.image,
-      {Key? key, this.color = Colors.white, this.size = Sizes.iconMed})
-      : super(key: key);
+      {super.key, this.color = Colors.white, this.size = Sizes.iconMed});
 
   @override
   Widget build(BuildContext context) {

@@ -23,7 +23,7 @@ class ColorShiftIconBtn extends StatelessWidget {
 
   const ColorShiftIconBtn(
     this.icon, {
-    Key? key,
+    super.key,
     this.onPressed,
     this.color,
     this.size = 22,
@@ -33,20 +33,20 @@ class ColorShiftIconBtn extends StatelessWidget {
     this.minWidth,
     this.minHeight,
     this.shrinkWrap = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    bool _mouseOver = false;
+    bool mouseOver = false;
     return StatefulBuilder(
       builder: (_, setState) {
         Color iconColor = (color ?? context.theme.primaryColor);
-        if (_mouseOver) {
+        if (mouseOver) {
           iconColor = ColorUtils.shiftHsl(iconColor, -.2);
         }
         return MouseRegion(
-          onEnter: (_) => setState(() => _mouseOver = true),
-          onExit: (_) => setState(() => _mouseOver = false),
+          onEnter: (_) => setState(() => mouseOver = true),
+          onExit: (_) => setState(() => mouseOver = false),
           child: BaseStyledBtn(
               minHeight: minHeight ?? (shrinkWrap ? 0 : 42),
               minWidth: minWidth ?? (shrinkWrap ? 0 : 42),

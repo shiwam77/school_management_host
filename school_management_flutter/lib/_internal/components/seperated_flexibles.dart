@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-typedef Widget SeparatorBuilder();
+typedef SeparatorBuilder = Widget Function();
 
 class SeparatedRow extends StatelessWidget {
   final List<Widget> children;
@@ -31,13 +31,13 @@ class SeparatedRow extends StatelessWidget {
       if (i > 0 && separatorBuilder != null) c.insert(i, separatorBuilder!());
     }
     return Row(
-      children: c,
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
       verticalDirection: verticalDirection,
+      children: c,
     );
   }
 }
@@ -53,7 +53,7 @@ class SeparatedColumn extends StatelessWidget {
   final VerticalDirection verticalDirection;
 
   const SeparatedColumn({
-    Key? key,
+    super.key,
     required this.children,
     this.separatorBuilder,
     this.mainAxisAlignment = MainAxisAlignment.start,
@@ -62,7 +62,7 @@ class SeparatedColumn extends StatelessWidget {
     this.verticalDirection = VerticalDirection.down,
     this.textBaseline,
     this.textDirection,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -71,13 +71,13 @@ class SeparatedColumn extends StatelessWidget {
       if (i > 0 && separatorBuilder != null) c.insert(i, separatorBuilder!());
     }
     return Column(
-      children: c,
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
       verticalDirection: verticalDirection,
+      children: c,
     );
   }
 }

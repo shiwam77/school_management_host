@@ -58,9 +58,8 @@ class LoginVm extends ViewModel {
           "email": userNameController.text.trim(),
           "password": passwordController.text.trim()
         };
-        await Future.delayed(Duration(seconds: 1));
+        await Future.delayed(const Duration(seconds: 1));
         navigateToDashboard();
-      } catch (e, stackTrace) {
       } finally {
         isLoading = false;
         setState(() {});

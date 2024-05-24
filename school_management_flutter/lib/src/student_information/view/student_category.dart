@@ -4,18 +4,18 @@ import 'package:school_management_flutter/_internal/components/spacing.dart';
 import 'package:school_management_flutter/const/app_colors.dart';
 import 'package:school_management_flutter/extension/theme_extension.dart';
 import 'package:school_management_flutter/src/academics/view/section_screen.dart';
-import 'package:school_management_flutter/src/human_resource/vm/desgination.vm.dart';
+import 'package:school_management_flutter/src/student_information/vm/student_category.dart';
 import 'package:school_management_flutter/styles.dart';
 import 'package:statemanagement_riverpod_mvvm/riverpod_mvvm.dart';
 
-class DesignationScreen extends StatelessView<DesginationVM> {
-  const DesignationScreen({super.key});
+class StudentCategoryScreen extends StatelessView<StudentCategoryVM> {
+  const StudentCategoryScreen({super.key});
 
   @override
-  ViewModelProvider<DesginationVM> get vm => desginationVmProvider;
+  ViewModelProvider<StudentCategoryVM> get vm => studentCategoryVmProvider;
 
   @override
-  Widget render(BuildContext context, DesginationVM vm, ref) {
+  Widget render(BuildContext context, StudentCategoryVM vm, ref) {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
@@ -31,7 +31,7 @@ class DesignationScreen extends StatelessView<DesginationVM> {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                  child: CreateDesginationView(
+                  child: CreateStCategoryView(
                     vm: vm,
                   ),
                 ),
@@ -47,7 +47,7 @@ class DesignationScreen extends StatelessView<DesginationVM> {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                  child: DesginationListView(
+                  child: StCategoryListView(
                     vm: vm,
                   ),
                 ),
@@ -60,9 +60,9 @@ class DesignationScreen extends StatelessView<DesginationVM> {
   }
 }
 
-class CreateDesginationView extends StatelessWidget {
-  final DesginationVM vm;
-  const CreateDesginationView({super.key, required this.vm});
+class CreateStCategoryView extends StatelessWidget {
+  final StudentCategoryVM vm;
+  const CreateStCategoryView({super.key, required this.vm});
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +71,7 @@ class CreateDesginationView extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          'Add Designation',
+          'Create Category',
           style: context.theme.textTheme.titleMedium!.copyWith(
               fontSize: 20.sp,
               fontWeight: FontWeight.w500,
@@ -86,7 +86,7 @@ class CreateDesginationView extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 color: AppColors.textColorBlack),
             decoration: InputDecoration(
-              labelText: 'Designation..',
+              labelText: 'Category..',
               border: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: context.theme.primaryColor,
@@ -157,9 +157,9 @@ class CreateDesginationView extends StatelessWidget {
   }
 }
 
-class DesginationListView extends StatelessWidget {
-  final DesginationVM vm;
-  const DesginationListView({super.key, required this.vm});
+class StCategoryListView extends StatelessWidget {
+  final StudentCategoryVM vm;
+  const StCategoryListView({super.key, required this.vm});
 
   @override
   Widget build(BuildContext context) {
@@ -179,7 +179,7 @@ class DesginationListView extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'Designation List',
+            'Category List',
             style: context.theme.textTheme.titleMedium!.copyWith(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w500,
@@ -250,7 +250,7 @@ class DesginationListView extends StatelessWidget {
               columns: [
                 DataColumn(
                     label: Text(
-                  'Designation',
+                  'Category',
                   style: headerStyle,
                 )),
                 DataColumn(

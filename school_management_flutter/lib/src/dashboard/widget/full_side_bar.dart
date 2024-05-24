@@ -36,7 +36,7 @@ class _FullSideBarState extends State<FullSideBar> {
         backgroundColor: context.theme.canvasColor,
         activeBackgroundColor: Colors.red,
         activeIconColor: AppColors.statusUnderstock,
-        iconColor: Color(0xFF000000),
+        iconColor: const Color(0xFF000000),
         textStyle: context.theme.textTheme.labelLarge!.copyWith(
           fontSize: 13,
           letterSpacing: .5,

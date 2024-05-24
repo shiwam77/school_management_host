@@ -55,7 +55,12 @@ dependencies:
   provider: ^6.1.2
   styled_widget: ^0.4.1
   responsive_framework: ^1.4.0
+  melos: ^6.0.0
 
+  flutter_riverpod: any
+  path: any
+  path_provider: any
+  xdg_directories: any
 dev_dependencies:
   flutter_lints: ^3.0.0
   flutter_test:

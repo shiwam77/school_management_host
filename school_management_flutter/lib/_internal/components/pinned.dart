@@ -20,7 +20,7 @@ class Pinned extends StatelessWidget {
   final Pin vtPin;
   final Widget? child;
 
-  const Pinned({Key? key, required this.hzPin, required this.vtPin, this.child}) : super(key: key);
+  const Pinned({super.key, required this.hzPin, required this.vtPin, this.child});
 
   _Span calculateSpanFromPin(Pin pin, double maxSize) {
     var s = _Span();

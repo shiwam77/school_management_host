@@ -52,8 +52,7 @@ class SignupVm extends ViewModel {
           "email": userNameController.text.trim(),
           "password": passwordController.text.trim()
         };
-        await Future.delayed(Duration(seconds: 1));
-      } catch (e, stackTrace) {
+        await Future.delayed(const Duration(seconds: 1));
       } finally {
         isLoading = false;
         setState(() {});

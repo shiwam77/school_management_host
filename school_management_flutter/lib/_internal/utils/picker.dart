@@ -6,7 +6,7 @@ Future<String?> pickImage({String confirmText = "", String initialPath = ""}) as
   if (confirmText.isEmpty) confirmText = "Pick Image";
   if (initialPath.isEmpty) initialPath = await PathUtil.homePath;
 
-  final typeGroup = XTypeGroup(label: 'images', extensions: ['jpg', 'jpeg', 'png']);
+  const typeGroup = XTypeGroup(label: 'images', extensions: ['jpg', 'jpeg', 'png']);
   XFile? file = (await openFile(
     initialDirectory: initialPath,
     confirmButtonText: confirmText,

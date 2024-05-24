@@ -112,7 +112,7 @@ class StaffAttendanceScreen extends StatelessView<StaffAttendanceVM> {
                                       fontWeight: FontWeight.w500,
                                       color: AppColors.textColorBlack),
                             ),
-                            VSpace(12),
+                            const VSpace(12),
                             DatePickerTextField(
                               labelText: 'Attendance Date',
                               controller: TextEditingController(
@@ -172,7 +172,7 @@ class StaffAttendanceScreen extends StatelessView<StaffAttendanceVM> {
                                     fontWeight: FontWeight.normal,
                                     color: AppColors.textColorBlack),
                           ),
-                          HSpace(12),
+                          const HSpace(12),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [

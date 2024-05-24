@@ -5,7 +5,7 @@ class TranslateAndAlign extends StatelessWidget {
   final Alignment align;
   final Widget? child;
 
-  TranslateAndAlign({this.child, this.offset = Offset.zero, this.align = Alignment.topLeft});
+  const TranslateAndAlign({super.key, this.child, this.offset = Offset.zero, this.align = Alignment.topLeft});
 
   @override
   Widget build(BuildContext context) {

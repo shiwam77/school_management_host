@@ -7,7 +7,7 @@ class Utils {
     SystemChannels.textInput.invokeMethod('TextInput.hide');
   }
 
-  static bool get isMouseConnected => RendererBinding.instance?.mouseTracker.mouseIsConnected ?? false;
+  static bool get isMouseConnected => RendererBinding.instance.mouseTracker.mouseIsConnected ?? false;
 
   static void unFocus() {
     primaryFocus?.unfocus();

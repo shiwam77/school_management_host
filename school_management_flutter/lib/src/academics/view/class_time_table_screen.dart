@@ -107,7 +107,7 @@ class ClassTimeTableScreen extends StatelessView<ClassTimeTableVM> {
                                     fontWeight: FontWeight.w500,
                                     color: AppColors.textColorBlack),
                           ),
-                          VSpace(12),
+                          const VSpace(12),
                           Container(
                             height: 35,
                             padding: const EdgeInsets.symmetric(horizontal: 10),

@@ -111,7 +111,7 @@ class PayRollScreen extends StatelessView<PayRoleVM> {
                                       fontWeight: FontWeight.w500,
                                       color: AppColors.textColorBlack),
                             ),
-                            VSpace(12),
+                            const VSpace(12),
                             Container(
                               height: 35,
                               padding:
@@ -165,7 +165,7 @@ class PayRollScreen extends StatelessView<PayRoleVM> {
                                       fontWeight: FontWeight.w500,
                                       color: AppColors.textColorBlack),
                             ),
-                            VSpace(12),
+                            const VSpace(12),
                             Container(
                               height: 35,
                               padding:

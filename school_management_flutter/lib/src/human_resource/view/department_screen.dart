@@ -30,7 +30,7 @@ class DepartmentScreen extends StatelessView<DepartmentVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: CreateDepartmentView(
                     vm: vm,
                   ),
@@ -46,7 +46,7 @@ class DepartmentScreen extends StatelessView<DepartmentVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: DepartmentListView(
                     vm: vm,
                   ),

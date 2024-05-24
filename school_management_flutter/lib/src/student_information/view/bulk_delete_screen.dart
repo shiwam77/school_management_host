@@ -4,18 +4,18 @@ import 'package:school_management_flutter/_internal/components/spacing.dart';
 import 'package:school_management_flutter/const/app_colors.dart';
 import 'package:school_management_flutter/extension/theme_extension.dart';
 import 'package:school_management_flutter/src/academics/view/section_screen.dart';
-import 'package:school_management_flutter/src/human_resource/vm/saff_crud.vm.dart';
+import 'package:school_management_flutter/src/student_information/vm/bulk_delete.vm.dart';
 import 'package:school_management_flutter/styles.dart';
 import 'package:statemanagement_riverpod_mvvm/riverpod_mvvm.dart';
 
-class StaffCRUDScreen extends StatelessView<StaffCRUDVM> {
-  const StaffCRUDScreen({super.key});
+class BulkDeleteView extends StatelessView<BulkDeleteVM> {
+  const BulkDeleteView({super.key});
 
   @override
-  ViewModelProvider<StaffCRUDVM> get vm => staffCRUDVmProvider;
+  ViewModelProvider<BulkDeleteVM> get vm => bulkDeleteVmProvider;
 
   @override
-  Widget render(BuildContext context, StaffCRUDVM vm, ref) {
+  Widget render(BuildContext context, BulkDeleteVM vm, ref) {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
@@ -31,27 +31,12 @@ class StaffCRUDScreen extends StatelessView<StaffCRUDVM> {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Select Criteria',
-                        style: context.theme.textTheme.titleMedium!.copyWith(
-                            fontSize: 25.sp,
-                            fontWeight: FontWeight.w500,
-                            color: AppColors.textColorBlack),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Add Staff',
-                          style: context.theme.textTheme.titleMedium!.copyWith(
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w500,
-                              color: AppColors.textColorBlack),
-                        ),
-                      ),
-                    ],
+                  Text(
+                    'Select Criteria',
+                    style: context.theme.textTheme.titleMedium!.copyWith(
+                        fontSize: 25.sp,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.textColorBlack),
                   ),
                   const VSpace(12),
                   const Divider(
@@ -65,7 +50,7 @@ class StaffCRUDScreen extends StatelessView<StaffCRUDVM> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Role",
+                              "Class",
                               textAlign: TextAlign.start,
                               style: context.theme.textTheme.titleMedium!
                                   .copyWith(
@@ -119,7 +104,8 @@ class StaffCRUDScreen extends StatelessView<StaffCRUDVM> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Search By Keyword",
+                              "Section",
+                              textAlign: TextAlign.start,
                               style: context.theme.textTheme.titleMedium!
                                   .copyWith(
                                       fontSize: 18.sp,
@@ -127,72 +113,40 @@ class StaffCRUDScreen extends StatelessView<StaffCRUDVM> {
                                       color: AppColors.textColorBlack),
                             ),
                             const VSpace(12),
-                            SizedBox(
+                            Container(
                               height: 35,
-                              child: TextField(
-                                style: context.theme.textTheme.titleMedium!
-                                    .copyWith(
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w500,
-                                        color: AppColors.textColorBlack),
-                                decoration: InputDecoration(
-                                  prefixIcon: const Icon(Icons.search),
-                                  hintText: 'Search...',
-                                  contentPadding: const EdgeInsets.symmetric(
-                                      vertical: 10), // Adjust vertical padding
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Colors
-                                            .blue), // Change this color to your desired color
-                                  ),
-                                  labelStyle: context
-                                      .theme.textTheme.titleMedium!
-                                      .copyWith(
-                                          fontSize: 18.sp,
-                                          fontWeight: FontWeight.w500,
-                                          color: AppColors.textColorBlack),
-                                  hintStyle: context
-                                      .theme.textTheme.titleMedium!
-                                      .copyWith(
-                                          fontSize: 18.sp,
-                                          fontWeight: FontWeight.w500,
-                                          color: AppColors.textColorBlack),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: context.theme.primaryColor,
-                                      width: 1.w,
-                                    ),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10.r)),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Colors.red, width: 1.w),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10.r)),
-                                  ),
-                                  focusedErrorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Colors.red, width: 1.w),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10.r)),
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10.r)),
+                                  border: Border.all(
                                       color: Colors.black
-                                          .withOpacity(0.23999999463558197),
+                                          .withOpacity(0.23999999463558197))),
+                              child: DropdownButton<String>(
+                                isExpanded: true,
+                                underline: const SizedBox.shrink(),
+                                value: vm.selectedClass,
+                                onChanged: (String? newValue) {
+                                  // Update the selected class
+                                  vm.selectedClass = newValue!;
+                                  vm.setState(() {});
+                                },
+                                items: vm.classes.map<DropdownMenuItem<String>>(
+                                    (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(
+                                      value,
+                                      style: context
+                                          .theme.textTheme.titleMedium!
+                                          .copyWith(
+                                              fontSize: 18.sp,
+                                              fontWeight: FontWeight.w500,
+                                              color: AppColors.textColorBlack),
                                     ),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10.r)),
-                                  ),
-                                  disabledBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                    ),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10.r)),
-                                  ),
-                                ),
+                                  );
+                                }).toList(),
                               ),
                             ),
                           ],
@@ -309,7 +263,7 @@ class StaffCRUDScreen extends StatelessView<StaffCRUDVM> {
 }
 
 class StaffListView extends StatelessWidget {
-  final StaffCRUDVM vm;
+  final BulkDeleteVM vm;
   const StaffListView({super.key, required this.vm});
 
   @override

@@ -164,7 +164,7 @@ class AppTheme {
         overlayColor: convertColorToMaterialStateProperty(AppColors.primary),
       ),
       switchTheme: SwitchThemeData(
-        thumbColor: MaterialStateProperty.all(
+        thumbColor: WidgetStateProperty.all(
             isDarkTheme ? Colors.orange : Colors.purple),
       ),
       listTileTheme: ListTileThemeData(
@@ -201,13 +201,13 @@ class AppTheme {
   }
 }
 
-MaterialStateProperty<Color?> convertColorToMaterialStateProperty(
+WidgetStateProperty<Color?> convertColorToMaterialStateProperty(
     Color baseColor) {
-  return MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-    if (states.contains(MaterialState.pressed)) {
+  return WidgetStateProperty.resolveWith((Set<WidgetState> states) {
+    if (states.contains(WidgetState.pressed)) {
       // Color when the widget is pressed
       return baseColor.withOpacity(0.8);
-    } else if (states.contains(MaterialState.disabled)) {
+    } else if (states.contains(WidgetState.disabled)) {
       // Color when the widget is disabled
       return baseColor.withOpacity(0.4);
     } else {

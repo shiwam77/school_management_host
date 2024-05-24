@@ -16,7 +16,7 @@ class TransparentBtn extends StatelessWidget {
   final double borderRadius;
 
   const TransparentBtn(
-      {Key? key,
+      {super.key,
       this.onPressed,
       this.child,
       this.bigMode = false,
@@ -24,8 +24,7 @@ class TransparentBtn extends StatelessWidget {
       this.bgColor,
       this.hoverColor,
       this.downColor,
-      this.borderRadius = Corners.s5})
-      : super(key: key);
+      this.borderRadius = Corners.s5});
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +40,8 @@ class TransparentBtn extends StatelessWidget {
       hoverColor: hoverColor ?? Colors.grey,
       downColor: downColor ?? ColorUtils.shiftHsl(Colors.grey, .1),
       borderRadius: borderRadius,
-      child: child,
       onPressed: onPressed,
+      child: child,
     );
   }
 }
@@ -56,24 +55,23 @@ class TransparentTextBtn extends StatelessWidget {
   final Color? bgColor;
 
   const TransparentTextBtn(this.label,
-      {Key? key,
+      {super.key,
       this.onPressed,
       this.color,
       this.bigMode = false,
       this.style,
-      this.bgColor})
-      : super(key: key);
+      this.bgColor});
 
   @override
   Widget build(BuildContext context) {
     return TransparentBtn(
       bigMode: bigMode,
       bgColor: bgColor,
+      onPressed: onPressed,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [Text(label, style: style)],
       ),
-      onPressed: onPressed,
     );
   }
 }
@@ -107,9 +105,9 @@ class TransparentIconAndTextBtn extends StatelessWidget {
       child: Row(
         children: [
           StyledImageIcon(icon, size: iconSize, color: styledImageIconColor!),
-          HSpace(Insets.sm),
+          const HSpace(Insets.sm),
           Text(label, style: style),
-          HSpace(
+          const HSpace(
               3), // Add a bit of extra padding to the right, seems like Icon() has it's own baked in padding
         ],
       ),

@@ -120,7 +120,7 @@ class ApproveLeaveRequestScreen extends StatelessView<ApproveLeaveRequestVM> {
                   ),
                 ),
                 const VSpace(12),
-                LeaveList(),
+                const LeaveList(),
                 // const StudentList(),
               ],
             ),
@@ -131,13 +131,13 @@ class ApproveLeaveRequestScreen extends StatelessView<ApproveLeaveRequestVM> {
   }
 
   void _showApproveLeaveDialog(BuildContext context) {
-    TextEditingController _fromDateController = TextEditingController();
-    TextEditingController _toDateController = TextEditingController();
-    TextEditingController _reasonController = TextEditingController();
+    TextEditingController fromDateController = TextEditingController();
+    TextEditingController toDateController = TextEditingController();
+    TextEditingController reasonController = TextEditingController();
 
-    String? _selectedLeaveType;
-    String? _selectedStaffName;
-    String? _selectedRole;
+    String? selectedLeaveType;
+    String? selectedStaffName;
+    String? selectedRole;
 
     showDialog(
       context: context,
@@ -189,10 +189,10 @@ class ApproveLeaveRequestScreen extends StatelessView<ApproveLeaveRequestVM> {
                                             color: AppColors.textColorBlack),
                                   ),
                                   underline: const SizedBox.shrink(),
-                                  value: _selectedRole,
+                                  value: selectedRole,
                                   onChanged: (String? newValue) {
                                     setState(() {
-                                      _selectedRole = newValue;
+                                      selectedRole = newValue;
                                     });
                                   },
                                   items: <String>[
@@ -224,7 +224,7 @@ class ApproveLeaveRequestScreen extends StatelessView<ApproveLeaveRequestVM> {
                               ),
                             ),
                           ),
-                          HSpace(12),
+                          const HSpace(12),
                           Expanded(
                             child: Container(
                               height: 40,
@@ -253,10 +253,10 @@ class ApproveLeaveRequestScreen extends StatelessView<ApproveLeaveRequestVM> {
                                             color: AppColors.textColorBlack),
                                   ),
                                   underline: const SizedBox.shrink(),
-                                  value: _selectedStaffName,
+                                  value: selectedStaffName,
                                   onChanged: (String? newValue) {
                                     setState(() {
-                                      _selectedStaffName = newValue;
+                                      selectedStaffName = newValue;
                                     });
                                   },
                                   items: <String>[
@@ -302,7 +302,7 @@ class ApproveLeaveRequestScreen extends StatelessView<ApproveLeaveRequestVM> {
                               ),
                             ),
                           ),
-                          HSpace(12),
+                          const HSpace(12),
                           Expanded(
                             child: Container(
                               height: 40,
@@ -331,10 +331,10 @@ class ApproveLeaveRequestScreen extends StatelessView<ApproveLeaveRequestVM> {
                                             color: AppColors.textColorBlack),
                                   ),
                                   underline: const SizedBox.shrink(),
-                                  value: _selectedLeaveType,
+                                  value: selectedLeaveType,
                                   onChanged: (String? newValue) {
                                     setState(() {
-                                      _selectedLeaveType = newValue;
+                                      selectedLeaveType = newValue;
                                     });
                                   },
                                   items: <String>[
@@ -374,33 +374,33 @@ class ApproveLeaveRequestScreen extends StatelessView<ApproveLeaveRequestVM> {
                           Expanded(
                             child: DatePickerTextField(
                               labelText: 'Leave From Date',
-                              controller: _fromDateController,
+                              controller: fromDateController,
                             ),
                           ),
-                          HSpace(12),
+                          const HSpace(12),
                           Expanded(
                             child: DatePickerTextField(
                               labelText: 'Leave To Date',
-                              controller: _toDateController,
+                              controller: toDateController,
                             ),
                           ),
                         ],
                       ),
-                      VSpace(20),
+                      const VSpace(20),
                       Row(
                         children: [
                           Expanded(
                             child: TextField(
-                              controller: _reasonController,
+                              controller: reasonController,
                               maxLines: 3,
                               decoration: WidgetConst.inputDecoration(
                                   label: 'Reason', context: context),
                             ),
                           ),
-                          HSpace(12),
+                          const HSpace(12),
                           Expanded(
                             child: TextField(
-                              controller: _reasonController,
+                              controller: reasonController,
                               maxLines: 3,
                               decoration: WidgetConst.inputDecoration(
                                   label: 'Note', context: context),
@@ -408,7 +408,7 @@ class ApproveLeaveRequestScreen extends StatelessView<ApproveLeaveRequestVM> {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       ElevatedButton(
                         onPressed: () async {
                           // FilePickerResult? result =

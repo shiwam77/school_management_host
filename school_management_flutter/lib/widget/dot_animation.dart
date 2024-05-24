@@ -5,10 +5,10 @@ class RotatingDots extends StatefulWidget {
   final Color color;
 
   const RotatingDots({
-    Key? key,
+    super.key,
     required this.size,
     required this.color,
-  }) : super(key: key);
+  });
 
   @override
   _RotatingDotsState createState() => _RotatingDotsState();
@@ -152,21 +152,19 @@ class DrawDot extends StatelessWidget {
   final Color color;
 
   const DrawDot.circular({
-    Key? key,
+    super.key,
     required double dotSize,
     required this.color,
   })  : width = dotSize,
         height = dotSize,
-        circular = true,
-        super(key: key);
+        circular = true;
 
   const DrawDot.elliptical({
-    Key? key,
+    super.key,
     required this.width,
     required this.height,
     required this.color,
-  })  : circular = false,
-        super(key: key);
+  })  : circular = false;
 
   @override
   Widget build(BuildContext context) {

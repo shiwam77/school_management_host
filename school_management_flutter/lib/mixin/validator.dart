@@ -1,7 +1,7 @@
 class FieldValidator {
   static String? checkNullEmptyValidation(String value, String fieldName,
       {required void Function(bool) hasError}) {
-    if (value == null || value.isEmpty) {
+    if (value.isEmpty) {
       hasError(true);
       return '$fieldName is required';
     } else {

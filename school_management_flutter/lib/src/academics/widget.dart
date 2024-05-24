@@ -9,7 +9,7 @@ class CustomDropdown extends StatelessWidget {
   final double? width;
   final Color? bgColor;
   CustomDropdown(
-      {this.width, this.list, this.onChange, this.dropDownValue, this.bgColor});
+      {super.key, this.width, this.list, this.onChange, this.dropDownValue, this.bgColor});
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +36,12 @@ class CustomDropdown extends StatelessWidget {
           alignment: Alignment.centerLeft,
           style: context.theme.textTheme.titleMedium!.copyWith(
             fontSize: 20.sp,
-            color: Color(0xFF5D5D5D),
+            color: const Color(0xFF5D5D5D),
           ),
           dropdownColor: context.theme.scaffoldBackgroundColor,
           icon: const Icon(Icons.arrow_drop_down, color: Color(0xFF5D5D5D)),
           iconSize: 24.0,
-          underline: SizedBox.shrink(),
+          underline: const SizedBox.shrink(),
           elevation: dropDownValue == null ? 0 : 2,
           onChanged: (String? newValue) {
             onChange!(newValue);
@@ -56,7 +56,7 @@ class CustomDropdown extends StatelessWidget {
                   value,
                   style: context.theme.textTheme.titleMedium!.copyWith(
                     fontSize: 20.sp,
-                    color: Color(0xFF5D5D5D),
+                    color: const Color(0xFF5D5D5D),
                   ),
                 ),
               ),

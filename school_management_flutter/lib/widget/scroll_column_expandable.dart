@@ -10,7 +10,7 @@ class ScrollColumnExpandable extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
 
   const ScrollColumnExpandable({
-    Key? key,
+    super.key,
     required this.children,
     CrossAxisAlignment? crossAxisAlignment,
     MainAxisAlignment? mainAxisAlignment,
@@ -21,14 +21,13 @@ class ScrollColumnExpandable extends StatelessWidget {
   })  : crossAxisAlignment = crossAxisAlignment ?? CrossAxisAlignment.center,
         mainAxisAlignment = mainAxisAlignment ?? MainAxisAlignment.start,
         verticalDirection = verticalDirection ?? VerticalDirection.down,
-        padding = padding ?? EdgeInsets.zero,
-        super(key: key);
+        padding = padding ?? EdgeInsets.zero;
 
   @override
   Widget build(BuildContext context) {
     final children = <Widget>[const SizedBox(width: double.infinity)];
 
-    if (this.children != null) children.addAll(this.children);
+    children.addAll(this.children);
     return LayoutBuilder(
       builder: (context, constraint) {
         return SingleChildScrollView(

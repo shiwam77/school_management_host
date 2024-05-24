@@ -7,8 +7,9 @@ class BuildUtils {
       BuildContext? ctx = key.currentContext;
       if (ctx != null) {
         Size? size = getSizeFromContext(ctx);
-        if (size != null)
+        if (size != null) {
           callback(size);
+        }
       }
     });
   }

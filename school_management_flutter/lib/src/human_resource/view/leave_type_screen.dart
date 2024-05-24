@@ -30,7 +30,7 @@ class LeaveTypeScreen extends StatelessView<LeaveTypeVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: CreateLeaveTypeView(
                     vm: vm,
                   ),
@@ -46,7 +46,7 @@ class LeaveTypeScreen extends StatelessView<LeaveTypeVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: LeaveTypeListView(
                     vm: vm,
                   ),

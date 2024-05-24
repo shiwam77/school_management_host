@@ -119,7 +119,7 @@ class ApplyLeaveScreen extends StatelessView<ApplyLeaveVM> {
                   ),
                 ),
                 const VSpace(12),
-                LeaveList(),
+                const LeaveList(),
                 // const StudentList(),
               ],
             ),
@@ -130,11 +130,11 @@ class ApplyLeaveScreen extends StatelessView<ApplyLeaveVM> {
   }
 
   void _showLeaveDialog(BuildContext context) {
-    TextEditingController _fromDateController = TextEditingController();
-    TextEditingController _toDateController = TextEditingController();
-    TextEditingController _reasonController = TextEditingController();
+    TextEditingController fromDateController = TextEditingController();
+    TextEditingController toDateController = TextEditingController();
+    TextEditingController reasonController = TextEditingController();
 
-    String? _selectedLeaveType;
+    String? selectedLeaveType;
 
     showDialog(
       context: context,
@@ -148,7 +148,7 @@ class ApplyLeaveScreen extends StatelessView<ApplyLeaveVM> {
                     BorderRadius.circular(8.0), // Adjust the radius as needed
               ),
               backgroundColor: AppColors.canvasColor,
-              title: Text('Leave Application'),
+              title: const Text('Leave Application'),
               content: SizedBox(
                 width: 600,
                 child: SingleChildScrollView(
@@ -167,7 +167,7 @@ class ApplyLeaveScreen extends StatelessView<ApplyLeaveVM> {
                               ),
                             ),
                           ),
-                          HSpace(12),
+                          const HSpace(12),
                           Expanded(
                             child: Container(
                               height: 40,
@@ -196,10 +196,10 @@ class ApplyLeaveScreen extends StatelessView<ApplyLeaveVM> {
                                             color: AppColors.textColorBlack),
                                   ),
                                   underline: const SizedBox.shrink(),
-                                  value: _selectedLeaveType,
+                                  value: selectedLeaveType,
                                   onChanged: (String? newValue) {
                                     setState(() {
-                                      _selectedLeaveType = newValue;
+                                      selectedLeaveType = newValue;
                                     });
                                   },
                                   items: <String>[
@@ -233,32 +233,32 @@ class ApplyLeaveScreen extends StatelessView<ApplyLeaveVM> {
                           ),
                         ],
                       ),
-                      VSpace(20),
+                      const VSpace(20),
                       Row(
                         children: [
                           Expanded(
                             child: DatePickerTextField(
                               labelText: 'Leave From Date',
-                              controller: _fromDateController,
+                              controller: fromDateController,
                             ),
                           ),
-                          HSpace(12),
+                          const HSpace(12),
                           Expanded(
                             child: DatePickerTextField(
                               labelText: 'Leave To Date',
-                              controller: _toDateController,
+                              controller: toDateController,
                             ),
                           ),
                         ],
                       ),
-                      VSpace(20),
+                      const VSpace(20),
                       TextField(
-                        controller: _reasonController,
+                        controller: reasonController,
                         maxLines: 3,
                         decoration: WidgetConst.inputDecoration(
                             label: 'Reason', context: context),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       ElevatedButton(
                         onPressed: () async {
                           // FilePickerResult? result =

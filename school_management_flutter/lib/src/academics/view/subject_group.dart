@@ -30,7 +30,7 @@ class SubjectGroupScreen extends StatelessView<SubjectGroupVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: CreateSubjectView(
                     vm: vm,
                   ),
@@ -46,7 +46,7 @@ class SubjectGroupScreen extends StatelessView<SubjectGroupVM> {
                   borderRadius: Corners.s10Border,
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: SubjectListView(
                     vm: vm,
                   ),
@@ -196,9 +196,9 @@ class CreateSubjectView extends StatelessWidget {
                 ),
                 activeColor: Colors.white, // Set to white
                 checkColor: Colors.white, // Set to white
-                fillColor: MaterialStateProperty.resolveWith<Color>(
-                  (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.selected)) {
+                fillColor: WidgetStateProperty.resolveWith<Color>(
+                  (Set<WidgetState> states) {
+                    if (states.contains(WidgetState.selected)) {
                       // If the checkbox is checked, return white
                       return AppColors.btnColor;
                     }
@@ -259,9 +259,9 @@ class CreateSubjectView extends StatelessWidget {
                 ),
                 activeColor: Colors.white, // Set to white
                 checkColor: Colors.white, // Set to white
-                fillColor: MaterialStateProperty.resolveWith<Color>(
-                  (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.selected)) {
+                fillColor: WidgetStateProperty.resolveWith<Color>(
+                  (Set<WidgetState> states) {
+                    if (states.contains(WidgetState.selected)) {
                       // If the checkbox is checked, return white
                       return AppColors.btnColor;
                     }
@@ -350,7 +350,7 @@ class SubjectListView extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                   color: AppColors.textColorBlack),
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 hintText: 'Search...',
                 contentPadding: const EdgeInsets.symmetric(
                     vertical: 10), // Adjust vertical padding

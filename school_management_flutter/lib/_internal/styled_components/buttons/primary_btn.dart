@@ -8,8 +8,7 @@ class PrimaryBtn extends StatelessWidget {
   final VoidCallback? onPressed;
   final bool bigMode;
 
-  const PrimaryBtn({Key? key, this.child, this.onPressed, this.bigMode = false})
-      : super(key: key);
+  const PrimaryBtn({super.key, this.child, this.onPressed, this.bigMode = false});
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +20,8 @@ class PrimaryBtn extends StatelessWidget {
       hoverColor: context.appColors.color1,
       downColor: context.appColors.color1,
       borderRadius: bigMode ? Corners.s8 : Corners.s5,
-      child: child,
       onPressed: onPressed,
+      child: child,
     );
   }
 }

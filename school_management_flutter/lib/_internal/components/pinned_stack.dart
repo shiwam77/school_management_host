@@ -22,13 +22,12 @@ class PinnedStack extends StatelessWidget {
   final Clip clip;
 
   const PinnedStack(
-      {Key? key,
+      {super.key,
       required this.children,
       this.fit = StackFit.expand,
       this.alignment = Alignment.topLeft,
       this.textDirection = TextDirection.ltr,
-      this.clip = Clip.none})
-      : super(key: key);
+      this.clip = Clip.none});
 
   @override
   Widget build(BuildContext context) {

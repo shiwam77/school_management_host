@@ -167,7 +167,7 @@ class SectionScreen extends StatelessView<SectionVM> {
                             fontWeight: FontWeight.w500,
                             color: AppColors.textColorBlack),
                         decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.search),
+                          prefixIcon: const Icon(Icons.search),
                           hintText: 'Search...',
                           contentPadding: const EdgeInsets.symmetric(
                               vertical: 10), // Adjust vertical padding
@@ -230,11 +230,11 @@ class SectionScreen extends StatelessView<SectionVM> {
                       itemBuilder: (context, index) {
                         return MouseHoverBuilder(
                           isClickable: false,
-                          builder: (BuildContext context, bool _hovered) {
+                          builder: (BuildContext context, bool hovered) {
                             return InkWell(
                               onTap: () {},
                               child: Container(
-                                color: _hovered
+                                color: hovered
                                     ? Colors.grey.withOpacity(.5)
                                     : Colors.transparent,
                                 child: ListTile(
@@ -292,7 +292,7 @@ class SectionScreen extends StatelessView<SectionVM> {
                         Row(
                           children: [
                             IconButton(
-                              icon: Icon(Icons.keyboard_arrow_left),
+                              icon: const Icon(Icons.keyboard_arrow_left),
                               onPressed: () {
                                 // Handle previous page
                               },
@@ -316,7 +316,7 @@ class SectionScreen extends StatelessView<SectionVM> {
                             ),
                             const HSpace(6),
                             IconButton(
-                              icon: Icon(Icons.keyboard_arrow_right),
+                              icon: const Icon(Icons.keyboard_arrow_right),
                               onPressed: () {
                                 // Handle next page
                               },

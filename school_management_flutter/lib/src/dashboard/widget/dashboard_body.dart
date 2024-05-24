@@ -72,7 +72,7 @@ class _DashBoardBodyState extends State<DashBoardBody> {
 
                       // Condition.equals(name: DESKTOP, value: 376.w),
                     ],
-                    defaultValue: SizedBox(),
+                    defaultValue: const SizedBox(),
                   ).value;
                 }),
                 backgroundColor: context.theme.canvasColor,
@@ -263,7 +263,7 @@ class _DashBoardBodyState extends State<DashBoardBody> {
           child: Text(
             name,
             style: context.theme.textTheme.titleMedium!.copyWith(
-              color: Color(0xFF696969),
+              color: const Color(0xFF696969),
               fontSize: 20.sp,
               fontWeight: FontWeight.w600,
             ),
@@ -318,6 +318,44 @@ List<AdminMenuItem>? permissions = [
   ),
   AdminMenuItem(
     title: 'Human Resource',
+    icon: 'assets/multidoor.svg',
+    children: [
+      AdminMenuItem(
+        title: 'Staff',
+        route: '/staff',
+      ),
+      AdminMenuItem(
+        title: 'Staff Attendance',
+        route: '/staffAttendance',
+      ),
+      AdminMenuItem(
+        title: 'Payroll',
+        route: '/payroll',
+      ),
+      AdminMenuItem(
+        title: 'Approve Leave Request',
+        route: '/approveLeaveRequest',
+      ),
+      AdminMenuItem(
+        title: 'Apply leave',
+        route: '/applyleave',
+      ),
+      AdminMenuItem(
+        title: 'Leave Type',
+        route: '/leaveType',
+      ),
+      AdminMenuItem(
+        title: 'Department',
+        route: '/department',
+      ),
+      AdminMenuItem(
+        title: 'Designation',
+        route: '/designation',
+      ),
+    ],
+  ),
+  AdminMenuItem(
+    title: 'Student Information',
     icon: 'assets/multidoor.svg',
     children: [
       AdminMenuItem(

@@ -25,7 +25,7 @@ class RectangularTextField extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final TextInputType? keyboardType;
   const RectangularTextField(
-      {Key? key,
+      {super.key,
       this.prefixIconData,
       this.controller,
       this.onChange,
@@ -44,8 +44,7 @@ class RectangularTextField extends StatelessWidget {
       this.suffixIcon,
       this.isPrimary = true,
       this.color,
-      this.inputFormatters})
-      : super(key: key);
+      this.inputFormatters});
 
   @override
   Widget build(BuildContext context) {
